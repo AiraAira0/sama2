@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprises</title>
+  <link rel="stylesheet" href="../style/surprise.css">
+</head>
+<body>
+  <div class="page-container">
+    <h1>Surprises</h1>
+    <p>Click on a surprise!✨</p>
+    <ul>
+      <li class="surprise-item" data-icon="💌" data-text="I really love you, Sama. I know I’m not always the best friend, and sometimes I mess up, but I hope you can be patient with me. You’re honestly the sweetest person ever — calm, kind, and always make everything feel lighter. Even when I’m distant or quiet, I still care a lot. You’re someone I never want to lose.">Secret Message</li>
+
+      <li class="surprise-item" data-icon="🎬" data-text="Here’s a special video for you! Hope it makes you smile." data-video="../videos/Love.mp4">Special Video</li>
+
+      <li class="surprise-item" data-icon="🫂" data-text="I wish I could hug you right now..but well my prayers will hug you when my arms can't" data-hug="true">Hugs</li>
+    </ul>
+
+    <button onclick="goBack()">Go Back</button>
+  </div>
+
+  <!-- Popup Box -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="popup-icon"></span>
+      <p class="popup-text"></p>
+    </div>
+  </div>
+
+  <script src="../style/surprise.js"></script>
+</body>
+</html>

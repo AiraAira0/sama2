@@ -1,0 +1,84 @@
+:root{
+  --leaf:#90be6d;
+  --apple-green:#b5e48c;
+  --text:#355e3b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background-image:url(../images/sama3.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+}
+
+h1{
+  font-size: 25px;
+  color:darkgreen;
+}
+
+h3{
+  color:darkgreen;
+}
+.page-container{
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px) saturate(120%);
+  padding:2rem;
+  border-radius:25px;
+  text-align:center;
+  width:350px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+.messages p {
+  background: var(--leaf);
+  color: #fff;
+  padding: 12px;
+  margin: 12px 0;
+  cursor: pointer;
+  overflow: hidden;
+  max-height: 40px; /* الحجم الصغير بالبداية */
+  transition: max-height 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease, clip-path 0.3s ease;
+  
+  /* الشكل المعوج للمربع */
+  clip-path: polygon(
+    5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%
+  );
+  
+  transform: rotate(-2deg) skew(-3deg, 2deg);
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.2), -2px -2px 4px rgba(0,0,0,0.1);
+}
+
+.messages p.open {
+  max-height: 250px; /* الحجم بعد الفتح */
+  transform: rotate(0deg) skew(0deg, 0deg); /* تصير مستقيمة */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  
+  /* تصير الحواف مستقيمة بعد الفتح */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.samasem {
+      font-family: 'Dancing Script', cursive;
+      font-weight: bold;
+      color: green;
+    }
+
+button{
+  margin-top:15px;
+  padding:8px 18px;
+  border:none;
+  border-radius:20px;
+  background: var(--apple-green);
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{transform:scale(1.05);}
+

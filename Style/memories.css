@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../images/sama3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.page-container {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px) saturate(120%);
+  padding: 2rem;
+  border-radius: 25px;
+  text-align: center;
+  width: 360px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* المسافات ثابتة */
+  margin: 20px 0;
+  position: relative;
+}
+
+/* الصور متحركة تلقائياً مع glow خفيف */
+.gallery img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 0 10px rgba(181,228,140,0.4); /* glow دائم */
+  animation: floatyGlow 4s ease-in-out infinite alternate;
+}
+
+/* حركة طفيفة مستمرة لكل الصور */
+@keyframes floatyGlow {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 0 8px rgba(181,228,140,0.3);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3), 0 0 15px rgba(181,228,140,0.5);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 0 8px rgba(181,228,140,0.4);
+  }
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #b5e48c;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
